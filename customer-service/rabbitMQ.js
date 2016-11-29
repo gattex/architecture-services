@@ -17,6 +17,6 @@ module.exports.sendMessage = function(message){
 		    ch.publish(queue, '', new Buffer(message));
 	    	console.log("[Message Sent] " + message);
   		});
-  		setTimeout(function() { conn.close(); process.exit(0) }, 1000);
+  		setTimeout(function() { conn.close(); }, 1000);
 	});
 }
