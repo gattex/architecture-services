@@ -1,0 +1,8 @@
+version: '2'
+services:
+    customer:
+        build: customer-service/
+        ports: 
+        - 3000:3000
+    mail:
+        build: mail-service/
