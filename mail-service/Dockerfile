@@ -3,6 +3,7 @@ WORKDIR  /usr/app/mailservice
 RUN pwd
 ADD . /usr/app/mailservice
 
+RUN npm install
 RUN npm install --global nodemon
 
 CMD [ "nodemon" ]
