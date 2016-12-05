@@ -6,3 +6,9 @@ services:
         - 3000:3000
     mail:
         build: mail-service/
+    consul:
+        image: progrium/consul:latest
+        ports:
+        - 8500:8500
+        - 8600:53/udp
+        command: "-server -bootstrap -log-level debug"
