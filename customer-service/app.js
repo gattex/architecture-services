@@ -9,6 +9,10 @@ var rabbit = require('./rabbitMQ');
 
 app.use(parser.json());
 
+app.post('/customer/status', function (req, res, next) {
+  res.send('ok');
+});
+
 app.post('/customer/create', function (req, res, next) {
 
 

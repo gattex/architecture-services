@@ -1,8 +1,16 @@
 version: '2'
 services:
+    api:
+        build: api-gateway/
+        ports:
+        - 4000:3000
     customer:
         build: customer-service/
-        ports: 
-        - 3000:3000
     mail:
         build: mail-service/
+    consul:
+        image: progrium/consul:latest
+        ports:
+        - 8500:8500
+        - 8600:53/udp
+        command: "-server -bootstrap -log-level debug"
